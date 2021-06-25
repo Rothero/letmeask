@@ -38,6 +38,10 @@ export const AuthContextProvider = (props: AuthContextProviderProps) => {
     })
     return () => {
       unsubscribe();
+      /*Boa prática--> ao colocar um event listener na aplicação é necessário fechar 
+      depois, pois caso contrário o event listener irá ficar até dar time out
+      */
+
     }
   }, [])
 
